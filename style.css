@@ -1,0 +1,82 @@
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: bold;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#e66465), to(#9198e5));
+  background: linear-gradient(90deg, #e66465, #9198e5);
+}
+
+.calculator-grid {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (100px)[4];
+      grid-template-columns: repeat(4, 100px);
+  -ms-grid-rows: minmax(120px, auto) (100px)[5];
+      grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  -webkit-transition: background-color 0.1s 0s ease-in-out;
+  transition: background-color 0.1s 0s ease-in-out;
+  height: 100px;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.output {
+  min-height: 120px;
+  background: rgba(0, 0, 0, 0.75);
+  grid-column: 1 / -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+/*# sourceMappingURL=style.css.map */
